@@ -19,7 +19,7 @@ begin
     end;
 
     for i := 1 to 3 do begin
-        writeln(i,' ', a[i].name, 'eштуки  ', a[i].cena, ' ', a[i].colvo);
+        writeln(i,' ', a[i].name, ' штуки  ', a[i].cena, ' ', a[i].colvo);
     end;
 
 end.

@@ -16,6 +16,8 @@ begin
     readln(name);
     write('Адрес ');
     readln(adres);
+    write('Телефон');
+    readln(tele);
   end;
   
   write('Введите фамилию для поиска ');

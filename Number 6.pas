@@ -1,35 +1,29 @@
-Type rec=record 
-  name:string;
-  prof:string;
-  data:string;
-  zap:real;
+Type anketa=record
+    name:string;
+    otpusk:string;
+    day:integer;
+    vih:string;
 end;
 
-var
-  i : integer;
-  m : array[1..100] of rec;
-begin
-  for i := 1 to 3 do 
-  with m[i] do
-   begin
-    write('Введите имя ');
-    readln(name);
-    write('Введите должность ');
-    readln(prof);
-    write('Введите дату выдачи зарплаты ');
-    readln(data);
-    write('Введите зарплату ');
-    readln(zap);
-   end;
-   
-   for i := 1 to 3 do 
-    with m[i] do
-      begin
-       writeдт(name, ' ', prof, ' ', data, ' ', zap);
-      end;
-end.
+var 
+    i:integer;
+    a:array[1..30] of anketa;
 
-{Ведомость выдачи заработной платы
-Иванов И.И. Старший инженер 12.01.1996 79000.00
-Петров П.П. Системный администра 25.06.1993 85000.00
-Сидорова А.Р. Программист 30.07.1995 90000.00}
+begin
+    writeln('График отпусков');
+
+    for i := 1 to 3 do begin
+        write('Enter Name ');
+        readln(a[i].name);
+        write('Enter Otpusk ');
+        readln(a[i].otpusk);
+        write('Enter Vihod ');
+        readln(a[i].vih);
+        write('Enter day ');
+        readln(a[i].day);
+    end;
+
+    for i := 1 to 3 do begin
+       writeln(a[i].name, ' ', a[i].otpusk, ' ', a[i].vih, ' ', a[i].day);
+    end;
+end.
